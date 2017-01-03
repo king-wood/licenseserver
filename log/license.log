@@ -1,0 +1,13 @@
+Time:2017-01-01 23:27:19	file:LicenseController.go	level:INFO	[]
+Time:2017-01-01 23:33:31	file:LicenseController.go	level:INFO	requestbosy
+Time:2017-01-01 23:37:00	file:LicenseController.go	level:INFO	
+Time:2017-01-01 23:37:57	file:LicenseController.go	level:INFO	
+Time:2017-01-01 23:39:02	file:LicenseController.go	level:INFO	
+Time:2017-01-01 23:39:05	file:LicenseController.go	level:INFO	
+Time:2017-01-01 23:39:23	file:LicenseController.go	level:INFO	
+Time:2017-01-01 23:40:29	file:LicenseController.go	level:INFO	hshshsh
+Time:2017-01-01 23:40:46	file:LicenseController.go	level:INFO	hshshsh
+Time:2017-01-01 23:42:32	file:LicenseController.go	level:INFO	
+Time:2017-01-01 23:44:31	file:LicenseController.go	level:INFO	asdsd
+Time:2017-01-01 23:44:37	file:LicenseController.go	level:INFO	{"PhoneNumber": "123", "GUID":"123", "CompanyName": "xxxx", "ExpireAt":"2017-01-15"}
+Time:2017-01-02 19:15:54	file:LicenseController.go	level:INFO	{"PhoneNumber": "15850676563", "CompanyName":"xxxx", "ExpireAt": "2017-01-15", "GUID": "hehehehe"}
