@@ -1,0 +1,10 @@
+[server]
+port = 8080
+
+[database]
+dbType = "sqlite3"
+dbConnStr = "./license.db"
+
+[login]
+user = "admin"
+password = "1qaz@WSX"

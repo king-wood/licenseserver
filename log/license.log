@@ -1,13 +1,7 @@
-Time:2017-01-01 23:27:19	file:LicenseController.go	level:INFO	[]
-Time:2017-01-01 23:33:31	file:LicenseController.go	level:INFO	requestbosy
-Time:2017-01-01 23:37:00	file:LicenseController.go	level:INFO	
-Time:2017-01-01 23:37:57	file:LicenseController.go	level:INFO	
-Time:2017-01-01 23:39:02	file:LicenseController.go	level:INFO	
-Time:2017-01-01 23:39:05	file:LicenseController.go	level:INFO	
-Time:2017-01-01 23:39:23	file:LicenseController.go	level:INFO	
-Time:2017-01-01 23:40:29	file:LicenseController.go	level:INFO	hshshsh
-Time:2017-01-01 23:40:46	file:LicenseController.go	level:INFO	hshshsh
-Time:2017-01-01 23:42:32	file:LicenseController.go	level:INFO	
-Time:2017-01-01 23:44:31	file:LicenseController.go	level:INFO	asdsd
-Time:2017-01-01 23:44:37	file:LicenseController.go	level:INFO	{"PhoneNumber": "123", "GUID":"123", "CompanyName": "xxxx", "ExpireAt":"2017-01-15"}
-Time:2017-01-02 19:15:54	file:LicenseController.go	level:INFO	{"PhoneNumber": "15850676563", "CompanyName":"xxxx", "ExpireAt": "2017-01-15", "GUID": "hehehehe"}
+Time:2017-03-02 21:20:47	file:SerialController.go	level:WARN	text: add new serial error: 5 values for 6 columns
+Time:2017-03-02 21:25:07	file:serial.go	level:INFO	sql commandUpdate tbl_serial Set status = ?, phone_number = ?, pc_id = ?  Where serial = ? And status = ?
+Time:2017-05-30 19:40:39	file:home.go	level:INFO	text: userpassword
+Time:2017-05-30 22:26:41	file:home.go	level:INFO	login
+Time:2017-05-30 22:26:41	file:home.go	level:INFO	text: method get
+Time:2017-05-30 22:26:44	file:home.go	level:INFO	login
+Time:2017-05-30 22:26:44	file:home.go	level:INFO	text: method get

@@ -4,34 +4,58 @@ import (
 	"licenseserver/controllers/internalerrors"
 	"net/http"
 
-	"github.com/astaxie/beego"
+	"github.com/gorilla/sessions"
+
+	"encoding/json"
 )
 
-type BaseController struct {
-	beego.Controller
-}
+var (
+	store = sessions.NewCookieStore([]byte("something-very-secret"))
+)
 
-func (this *BaseController) handleError(err *internalerrors.LogicError) {
+const (
+	SESSION_NAME = "serial-session"
+)
+
+func handleError(w http.ResponseWriter, err *internalerrors.LogicError) {
 	if err.Type == internalerrors.RequestError {
-		this.Data["json"] = map[string]string{
+		body, _ := json.Marshal(map[string]string{
 			"error": err.Description,
-		}
-		this.Ctx.Output.SetStatus(http.StatusBadRequest)
+		})
+		w.Write(body)
+		w.WriteHeader(http.StatusBadRequest)
 	} else {
-		this.Data["json"] = map[string]string{
+		body, _ := json.Marshal(map[string]string{
 			"error": "server internal error",
-		}
-		this.Ctx.Output.SetStatus(http.StatusInternalServerError)
+		})
+		w.Write(body)
+		w.WriteHeader(http.StatusInternalServerError)
 	}
-	this.ServeJson()
 }
 
-func (this *BaseController) Response(code int, content interface{}) {
-	this.Data["json"] = content
-	this.Ctx.Output.SetStatus(code)
-	this.ServeJson()
+func Response(w http.ResponseWriter, code int, content interface{}) {
+	body, _ := json.Marshal(content)
+	w.Write(body)
+	w.WriteHeader(code)
 }
 
-func (this *BaseController) ServeJson() {
-	this.ServeJSON()
+func hasSession(w http.ResponseWriter, r *http.Request) bool {
+	session, err := store.Get(r, SESSION_NAME)
+	if err != nil {
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+		return false
+	}
+	if session.Values["User"] != nil {
+		return true
+	}
+	return false
+}
+
+func setSession(user string, w http.ResponseWriter, r *http.Request) {
+	session, err := store.Get(r, SESSION_NAME)
+	if err != nil {
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+	}
+	session.Values["User"] = user
+	session.Save(r, w)
 }
