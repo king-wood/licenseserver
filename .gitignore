@@ -2,3 +2,4 @@ licenseserver
 licenseserver.tar
 debug
 licenseserver
+log/*
