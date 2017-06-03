@@ -48,3 +48,9 @@ func Login(w http.ResponseWriter, r *http.Request) {
 	}
 	renderLogin(w)
 }
+
+func Logout(w http.ResponseWriter, r *http.Request) {
+	closeSession(w, r)
+	http.Redirect(w, r, "/", http.StatusSeeOther)
+	return
+}

@@ -59,3 +59,12 @@ func setSession(user string, w http.ResponseWriter, r *http.Request) {
 	session.Values["User"] = user
 	session.Save(r, w)
 }
+
+func closeSession(w http.ResponseWriter, r *http.Request) {
+	session, err := store.Get(r, SESSION_NAME)
+	if err != nil {
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+	}
+	delete(session.Values, "User")
+	session.Save(r, w)
+}

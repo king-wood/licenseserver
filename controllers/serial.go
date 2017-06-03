@@ -173,3 +173,19 @@ func GetAvailableSerial(w http.ResponseWriter, r *http.Request) {
 		"list": result,
 	})
 }
+
+func GetSerialByPhone(w http.ResponseWriter, r *http.Request) {
+	phone := r.FormValue("phonenumber")
+	if phone == "" {
+		handleError(w, internalerrors.NewLogicError(internalerrors.RequestError, "query peremeter error"))
+	}
+
+	result, e := models.GetSerialByPhoneNumber(phone)
+	if e != nil {
+		handleError(w, internalerrors.NewLogicError(internalerrors.InternalError, "query db error"))
+		return
+	}
+	Response(w, http.StatusOK, map[string]interface{}{
+		"list": result,
+	})
+}

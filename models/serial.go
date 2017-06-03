@@ -149,3 +149,10 @@ func IsSerialMatchPC(serial string, phonenumber string, pcid string) (bool, erro
 	e := Sql_Get(dbconn, &exist, dbconn.Rebind(sql), serial, phonenumber, pcid, SERIAL_REGISTERED)
 	return exist, e
 }
+
+func GetSerialByPhoneNumber(phonenumber string) ([]Serial, error) {
+	var serials []Serial
+	sql := "SELECT * FROM tbl_serial WHERE " + SERIAL_PHONE_NUMBER + " = ?"
+	e := Sql_Select(dbconn, &serials, dbconn.Rebind(sql), phonenumber)
+	return serials, e
+}
