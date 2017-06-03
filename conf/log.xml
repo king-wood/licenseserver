@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <seelog> 
-  <outputs formatid="main"> 
+  <outputs formatid="main">
+    <console/> 
     <filter levels="info,warn,error"> 
       <buffered size="10000" flushperiod="2000"> 
             <rollingfile type="size" filename="./log/license.log" maxsize="104857600" maxrolls="1"/>

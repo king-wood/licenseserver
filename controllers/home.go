@@ -11,6 +11,7 @@ import (
 
 const (
 	LOGIN_TEMPLATE_PATH = "views/login.html"
+	HOME_TEMPLATE_PATH  = "views/home.html"
 )
 
 func Home(w http.ResponseWriter, r *http.Request) {
@@ -18,7 +19,12 @@ func Home(w http.ResponseWriter, r *http.Request) {
 		http.Redirect(w, r, "/login", http.StatusSeeOther)
 		return
 	}
-	w.Write([]byte("Succeess"))
+	renderHome(w)
+}
+
+func renderHome(w http.ResponseWriter) {
+	tpl := template.Must(template.ParseFiles(HOME_TEMPLATE_PATH))
+	tpl.Execute(w, nil)
 }
 
 func renderLogin(w http.ResponseWriter) {
@@ -29,13 +35,11 @@ func renderLogin(w http.ResponseWriter) {
 func Login(w http.ResponseWriter, r *http.Request) {
 	log.Info("login")
 	if r.Method == http.MethodGet {
-		log.Info("text: method get")
 		renderLogin(w)
 		return
 	}
 	user := r.FormValue("username")
 	password := r.FormValue("userpassword")
-	log.Info("text: user", user, "password", password)
 
 	if user == viper.GetString("login.user") && password == viper.GetString("login.password") {
 		setSession(user, w, r)

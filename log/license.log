@@ -5,3 +5,23 @@ Time:2017-05-30 22:26:41	file:home.go	level:INFO	login
 Time:2017-05-30 22:26:41	file:home.go	level:INFO	text: method get
 Time:2017-05-30 22:26:44	file:home.go	level:INFO	login
 Time:2017-05-30 22:26:44	file:home.go	level:INFO	text: method get
+Time:2017-05-31 00:28:47	file:home.go	level:INFO	login
+Time:2017-05-31 00:28:47	file:home.go	level:INFO	text: userpassword
+Time:2017-05-31 00:28:57	file:home.go	level:INFO	login
+Time:2017-05-31 00:28:57	file:home.go	level:INFO	text: userpassword
+Time:2017-05-31 00:47:11	file:home.go	level:INFO	login
+Time:2017-05-31 00:47:11	file:home.go	level:INFO	text: method get
+Time:2017-05-31 00:47:21	file:home.go	level:INFO	login
+Time:2017-05-31 00:47:21	file:home.go	level:INFO	text: userpassword
+Time:2017-06-01 19:07:49	file:home.go	level:INFO	login
+Time:2017-06-01 19:07:49	file:home.go	level:INFO	text: method get
+Time:2017-06-01 19:07:58	file:home.go	level:INFO	login
+Time:2017-06-01 19:07:58	file:home.go	level:INFO	text: userpassword
+Time:2017-06-01 19:12:11	file:home.go	level:INFO	login
+Time:2017-06-01 19:12:11	file:home.go	level:INFO	text: userpassword
+Time:2017-06-01 19:41:37	file:home.go	level:INFO	login
+Time:2017-06-01 19:41:37	file:home.go	level:INFO	text: method get
+Time:2017-06-01 19:41:41	file:home.go	level:INFO	login
+Time:2017-06-01 19:41:41	file:home.go	level:INFO	text: method get
+Time:2017-06-01 19:41:59	file:home.go	level:INFO	login
+Time:2017-06-01 19:41:59	file:home.go	level:INFO	text: useradminpassword1qaz@WSX
